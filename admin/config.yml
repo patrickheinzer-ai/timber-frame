@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "bilder"
+public_folder: "/bilder"
+
+locale: "de"
+
+collections:
+  - name: "galerie"
+    label: "Galerie"
+    files:
+      - name: "galerie"
+        label: "Galerie-Bilder"
+        file: "galerie.json"
+        fields:
+          - label: "Bilder"
+            name: "items"
+            widget: "list"
+            label_singular: "Bild"
+            summary: "{{fields.title}} – {{fields.subtitle}}"
+            fields:
+              - { label: "Bild", name: "image", widget: "image" }
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Untertitel", name: "subtitle", widget: "string", required: false }
