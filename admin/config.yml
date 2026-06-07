@@ -24,3 +24,19 @@ collections:
               - { label: "Bild", name: "image", widget: "image" }
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Untertitel", name: "subtitle", widget: "string", required: false }
+  - name: "leistungen"
+    label: "Leistungen"
+    files:
+      - name: "leistungen"
+        label: "Was ich mache"
+        file: "leistungen.json"
+        fields:
+          - label: "Leistungen"
+            name: "items"
+            widget: "list"
+            label_singular: "Leistung"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Kurztext", name: "short", widget: "string" }
+              - { label: "Detailtext (Pop-up)", name: "detail", widget: "text" }
