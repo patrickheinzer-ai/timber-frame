@@ -100,6 +100,25 @@
   .svc .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);margin-top:.6rem;flex:none;box-shadow:0 0 0 4px rgba(199,154,85,.15)}
   .svc b{color:var(--text);font-weight:500}
   .svc small{display:block;font-size:.9rem;color:var(--muted);font-weight:300}
+  /* klickbare Leistung */
+  .svc.clickable{cursor:pointer;transition:padding-left .25s}
+  .svc.clickable:hover{padding-left:.4rem}
+  .svc.clickable .txt{flex:1}
+  .svc.clickable b{transition:color .2s}
+  .svc.clickable:hover b{color:var(--gold-bright)}
+  .svc .more{flex:none;align-self:center;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--gold);transition:all .25s;font-size:1.1rem;line-height:1}
+  .svc.clickable:hover .more{background:var(--gold);color:#1a130c;border-color:var(--gold)}
+
+  /* Detail-Pop-up */
+  .modal{position:fixed;inset:0;background:rgba(8,6,4,.85);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:110;padding:24px}
+  .modal.open{display:flex}
+  .modal .box{background:var(--bg2);border:1px solid var(--line);max-width:520px;width:100%;padding:2.6rem;box-shadow:var(--shadow);position:relative;animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+  @keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
+  .modal .box h3{font-family:var(--display);font-weight:500;font-size:1.7rem;color:#fff;margin-bottom:.4rem}
+  .modal .box .sub{color:var(--gold-bright);font-size:.85rem;letter-spacing:.08em;margin-bottom:1.4rem}
+  .modal .box p{color:var(--muted);font-size:1.05rem;font-weight:300;line-height:1.7}
+  .modal .close{position:absolute;top:1.2rem;right:1.2rem;width:38px;height:38px;border:1px solid var(--line);background:transparent;color:var(--text);border-radius:50%;cursor:pointer;font-size:1.2rem;line-height:1;transition:all .25s}
+  .modal .close:hover{border-color:var(--gold);color:var(--gold-bright)}
 
   .contact{padding:clamp(4rem,9vw,7rem) 0}
   .contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem)}
@@ -183,10 +202,7 @@
     </div>
     <div class="panel reveal">
       <h3>Was ich mache</h3>
-      <div class="svc"><span class="dot"></span><div><b>Möbel auf Mass</b><small>Tische, Sideboards, Schränke aus Massivholz</small></div></div>
-      <div class="svc"><span class="dot"></span><div><b>Drechslerarbeiten</b><small>Schalen, Gefässe und Dekoratives</small></div></div>
-      <div class="svc"><span class="dot"></span><div><b>Unikate auf Anfrage</b><small>Vom Entwurf bis zum fertigen Stück</small></div></div>
-      <div class="svc"><span class="dot"></span><div><b>Reparatur &amp; Restauration</b><small>Altem Holz neues Leben geben</small></div></div>
+      <div id="leistungen"><p style="color:var(--muted);font-style:italic">Wird geladen …</p></div>
     </div>
   </div>
 </section>
@@ -229,6 +245,15 @@
 
 <div class="lb" id="lb"><img src="" alt=""></div>
 
+<div class="modal" id="modal">
+  <div class="box">
+    <button class="close" id="modalClose" aria-label="Schliessen">&times;</button>
+    <h3 id="modalTitle"></h3>
+    <div class="sub" id="modalSub"></div>
+    <p id="modalText"></p>
+  </div>
+</div>
+
 <script>
   document.getElementById('y').textContent=new Date().getFullYear();
 
@@ -255,7 +280,30 @@
 
   const lb=document.getElementById('lb'),lbimg=lb.querySelector('img');
   lb.addEventListener('click',()=>lb.classList.remove('open'));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');modal.classList.remove('open');}});
+
+  // Leistungen laden + Pop-up
+  const modal=document.getElementById('modal');
+  const mTitle=document.getElementById('modalTitle'),mSub=document.getElementById('modalSub'),mText=document.getElementById('modalText');
+  function openModal(it){mTitle.textContent=it.title||'';mSub.textContent=it.short||'';mText.textContent=it.detail||'';modal.classList.add('open');}
+  function closeModal(){modal.classList.remove('open');}
+  document.getElementById('modalClose').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+
+  fetch('leistungen.json?v='+Date.now())
+    .then(r=>r.json())
+    .then(data=>{
+      const box=document.getElementById('leistungen');
+      box.innerHTML='';
+      (data.items||[]).forEach(it=>{
+        const row=document.createElement('div');
+        row.className='svc clickable';
+        row.innerHTML='<span class="dot"></span><div class="txt"><b>'+(it.title||'')+'</b><small>'+(it.short||'')+'</small></div><span class="more">+</span>';
+        row.addEventListener('click',()=>openModal(it));
+        box.appendChild(row);
+      });
+    })
+    .catch(()=>{document.getElementById('leistungen').innerHTML='<p style="color:var(--muted)">Leistungen konnten nicht geladen werden.</p>';});
 
   function initReveal(){
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
