@@ -1,13 +1,57 @@
 {
   "items": [
-    { "image": "/bilder/esstisch-eiche.jpg", "title": "Esstisch", "subtitle": "Eiche massiv" },
-    { "image": "/bilder/bank-eiche-zinken.jpg", "title": "Sitzbank", "subtitle": "Eiche, offene Zinkung" },
-    { "image": "/bilder/schreibtisch-mac.jpg", "title": "Schreibtisch-Kombination", "subtitle": "Eiche" },
-    { "image": "/bilder/sideboard-kirsche-3.jpg", "title": "Sideboard", "subtitle": "Kirschbaum" },
-    { "image": "/bilder/detail-1.jpg", "title": "Einbauschrank", "subtitle": "Eiche" },
-    { "image": "/bilder/schreibtisch-eiche.jpg", "title": "Schreibtisch", "subtitle": "Eiche, höhenverstellbar" },
-    { "image": "/bilder/sideboard-kirsche-1.jpg", "title": "Sideboard", "subtitle": "Detail" },
-    { "image": "/bilder/detail-2.jpg", "title": "Tablett", "subtitle": "auf Ständer" },
-    { "image": "/bilder/sideboard-kirsche-2.jpg", "title": "Sideboard", "subtitle": "in der Werkstatt" }
+    {
+      "image": "/bilder/esstisch-eiche.jpg",
+      "title": "Esstisch",
+      "subtitle": "Eiche massiv"
+    },
+    {
+      "image": "/bilder/bank-eiche-zinken.jpg",
+      "title": "Sitzbank",
+      "subtitle": "Eiche, offene Zinkung"
+    },
+    {
+      "image": "/bilder/schreibtisch-mac.jpg",
+      "title": "Schreibtisch-Kombination",
+      "subtitle": "Eiche"
+    },
+    {
+      "image": "/bilder/sideboard-kirsche-3.jpg",
+      "title": "Sideboard",
+      "subtitle": "Kirschbaum"
+    },
+    {
+      "image": "/bilder/detail-1.jpg",
+      "title": "Einbauschrank",
+      "subtitle": "Eiche"
+    },
+    {
+      "image": "/bilder/schreibtisch-eiche.jpg",
+      "title": "Schreibtisch",
+      "subtitle": "Eiche, höhenverstellbar"
+    },
+    {
+      "image": "/bilder/sideboard-kirsche-1.jpg",
+      "title": "Sideboard",
+      "subtitle": "Detail"
+    },
+    {
+      "image": "/bilder/detail-2.jpg",
+      "title": "Tablett",
+      "subtitle": "auf Ständer"
+    },
+    {
+      "image": "/bilder/sideboard-kirsche-2.jpg",
+      "title": "Sideboard",
+      "subtitle": "in der Werkstatt"
+    },
+    {
+      "image": "/bilder/img_20200314_081338.jpg",
+      "title": "Hirschli"
+    },
+    {
+      "image": "/bilder/20170525_110602.jpg",
+      "title": "Nussbaum Clubtisch"
+    }
   ]
 }
