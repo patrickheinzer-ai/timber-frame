@@ -173,6 +173,18 @@
   "knowsAbout": ["Massivholzmöbel", "Schreinerarbeiten", "Drechslerarbeiten", "Möbel auf Mass"]
 }
 </script>
+<style>
+  #cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:200;background:#1e1813;border-top:1px solid rgba(220,200,170,.16);padding:1.1rem 1.4rem;display:none;box-shadow:0 -10px 40px -20px rgba(0,0,0,.7)}
+  #cookie-banner.show{display:block}
+  #cookie-banner .cb-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;justify-content:center}
+  #cookie-banner p{color:#a99a85;font-size:.9rem;font-weight:300;margin:0;flex:1;min-width:240px;font-family:"Inter",system-ui,sans-serif}
+  #cookie-banner a{color:#e0b56a;text-decoration:underline}
+  #cookie-banner .cb-btns{display:flex;gap:.6rem;flex:none}
+  #cookie-banner button{border:0;padding:.6rem 1.4rem;border-radius:2px;font-size:.85rem;font-weight:600;cursor:pointer;font-family:"Inter",system-ui,sans-serif;transition:opacity .2s}
+  #cookie-banner button:hover{opacity:.85}
+  #cb-accept{background:#c79a55;color:#1a130c}
+  #cb-decline{background:transparent;color:#a99a85;border:1px solid rgba(220,200,170,.2)}
+</style>
 </head>
 <body>
 
@@ -337,6 +349,45 @@
     document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*70)+'ms';io.observe(el)});
   }
   initReveal();
+</script>
+<div id="cookie-banner">
+  <div class="cb-inner">
+    <p>Diese Website verwendet Google Analytics, um anonymisiert zu verstehen, wie sie genutzt wird. Du entscheidest, ob das erlaubt ist.</p>
+    <div class="cb-btns">
+      <button id="cb-decline">Ablehnen</button>
+      <button id="cb-accept">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var GA_ID="G-6KTZPLVFQJ";
+  var KEY="tf-consent";
+  function loadGA(){
+    var s=document.createElement("script");
+    s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js",new Date());
+    gtag("config",GA_ID,{anonymize_ip:true});
+  }
+  var choice=null;
+  try{choice=localStorage.getItem(KEY);}catch(e){}
+  if(choice==="granted"){loadGA();}
+  else if(choice!=="denied"){
+    var b=document.getElementById("cookie-banner");
+    b.classList.add("show");
+    document.getElementById("cb-accept").onclick=function(){
+      try{localStorage.setItem(KEY,"granted");}catch(e){}
+      b.classList.remove("show");loadGA();
+    };
+    document.getElementById("cb-decline").onclick=function(){
+      try{localStorage.setItem(KEY,"denied");}catch(e){}
+      b.classList.remove("show");
+    };
+  }
+})();
 </script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
