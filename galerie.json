@@ -1,18 +1,22 @@
 {
   "items": [
     {
+      "image": "/bilder/photo-2026-02-28-13-19-23.jpg",
+      "title": "Infrarot Sauna"
+    },
+    {
       "image": "/bilder/esstisch-eiche.jpg",
       "title": "Esstisch",
       "subtitle": "Eiche massiv"
     },
     {
+      "image": "/bilder/nachttisch-mit-lampe.jpg",
+      "title": "Nachttisch Sabrina"
+    },
+    {
       "image": "/bilder/bank-eiche-zinken.jpg",
       "title": "Sitzbank",
       "subtitle": "Eiche, offene Zinkung"
-    },
-    {
-      "image": "/bilder/nachttisch-mit-lampe.jpg",
-      "title": "Nachttisch Sabrina"
     },
     {
       "image": "/bilder/schreibtisch-mac.jpg",
@@ -64,10 +68,6 @@
     {
       "image": "/bilder/gestell-montiert.jpg",
       "title": "Gestell schmal  Raik"
-    },
-    {
-      "image": "/bilder/photo-2026-02-28-13-19-23.jpg",
-      "title": "Infrarot Sauna"
     },
     {
       "image": "/bilder/20171108_202319.jpg",
