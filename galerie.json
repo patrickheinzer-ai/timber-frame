@@ -39,11 +39,6 @@
       "subtitle": "Eiche, höhenverstellbar"
     },
     {
-      "image": "/bilder/sideboard-kirsche-1.jpg",
-      "title": "Sideboard",
-      "subtitle": "Detail"
-    },
-    {
       "image": "/bilder/detail-2.jpg",
       "title": "Tablett",
       "subtitle": "auf Ständer"
@@ -52,6 +47,10 @@
       "image": "/bilder/sideboard-kirsche-2.jpg",
       "title": "Sideboard",
       "subtitle": "in der Werkstatt"
+    },
+    {
+      "image": "/bilder/gestell-montiert.jpg",
+      "title": "Gestell schmal  Raik"
     },
     {
       "image": "/bilder/img_20200314_081338.jpg",
@@ -66,8 +65,9 @@
       "title": "Esstisch  Anita"
     },
     {
-      "image": "/bilder/gestell-montiert.jpg",
-      "title": "Gestell schmal  Raik"
+      "image": "/bilder/sideboard-kirsche-1.jpg",
+      "title": "Sideboard",
+      "subtitle": "Detail"
     },
     {
       "image": "/bilder/20171108_202319.jpg",
