@@ -5,28 +5,23 @@
       "title": "Infrarot Sauna"
     },
     {
-      "image": "/bilder/esstisch-eiche.jpg",
-      "title": "Esstisch",
-      "subtitle": "Eiche massiv"
+      "image": "/bilder/schreibtisch-mac.jpg",
+      "title": "Schreibtisch-Kombination",
+      "subtitle": "Eiche"
     },
     {
       "image": "/bilder/nachttisch-mit-lampe.jpg",
       "title": "Nachttisch Sabrina"
     },
     {
+      "image": "/bilder/esstisch-eiche.jpg",
+      "title": "Esstisch",
+      "subtitle": "Eiche massiv"
+    },
+    {
       "image": "/bilder/bank-eiche-zinken.jpg",
       "title": "Sitzbank",
       "subtitle": "Eiche, offene Zinkung"
-    },
-    {
-      "image": "/bilder/schreibtisch-mac.jpg",
-      "title": "Schreibtisch-Kombination",
-      "subtitle": "Eiche"
-    },
-    {
-      "image": "/bilder/sideboard-kirsche-3.jpg",
-      "title": "Sideboard",
-      "subtitle": "Kirschbaum"
     },
     {
       "image": "/bilder/detail-1.jpg",
@@ -35,13 +30,18 @@
     },
     {
       "image": "/bilder/schreibtisch-eiche.jpg",
-      "title": "Schreibtisch",
-      "subtitle": "Eiche, höhenverstellbar"
+      "title": "Sofatisch",
+      "subtitle": "Nussbaum"
     },
     {
       "image": "/bilder/detail-2.jpg",
       "title": "Tablett",
       "subtitle": "auf Ständer"
+    },
+    {
+      "image": "/bilder/sideboard-kirsche-3.jpg",
+      "title": "Sideboard",
+      "subtitle": "Kirschbaum"
     },
     {
       "image": "/bilder/sideboard-kirsche-2.jpg",
