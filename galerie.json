@@ -6,17 +6,22 @@
     },
     {
       "image": "/bilder/schreibtisch-mac.jpg",
-      "title": "Schreibtisch-Kombination",
+      "title": "Schreibtisch-Kombination höhenverstellbar",
       "subtitle": "Eiche"
     },
     {
       "image": "/bilder/nachttisch-mit-lampe.jpg",
-      "title": "Nachttisch Sabrina"
+      "title": "Nachttisch Sabrina Ebenholz"
     },
     {
       "image": "/bilder/esstisch-eiche.jpg",
-      "title": "Esstisch",
+      "title": "Esstisch Schläpfi",
       "subtitle": "Eiche massiv"
+    },
+    {
+      "image": "/bilder/sideboard-kirsche-1.jpg",
+      "title": "Pult mit Gestell",
+      "subtitle": "Kirschholz massiv"
     },
     {
       "image": "/bilder/bank-eiche-zinken.jpg",
@@ -26,16 +31,16 @@
     {
       "image": "/bilder/detail-1.jpg",
       "title": "Einbauschrank",
-      "subtitle": "Eiche"
+      "subtitle": "Eiche massiv"
     },
     {
       "image": "/bilder/schreibtisch-eiche.jpg",
-      "title": "Sofatisch",
+      "title": "Sofatisch auf Armlehne",
       "subtitle": "Nussbaum"
     },
     {
       "image": "/bilder/detail-2.jpg",
-      "title": "Tablett",
+      "title": "\"Konzentrations Wand\" für die Schule",
       "subtitle": "auf Ständer"
     },
     {
@@ -45,16 +50,18 @@
     },
     {
       "image": "/bilder/sideboard-kirsche-2.jpg",
-      "title": "Sideboard",
-      "subtitle": "in der Werkstatt"
+      "title": "Schubladenstock",
+      "subtitle": "Kirschholz mit MDF"
     },
     {
       "image": "/bilder/gestell-montiert.jpg",
-      "title": "Gestell schmal  Raik"
+      "title": "Gestell schmal  Raik",
+      "subtitle": "Eiche furniert"
     },
     {
       "image": "/bilder/img_20200314_081338.jpg",
-      "title": "Hirschli"
+      "title": "Hirschli - Kleiderständer",
+      "subtitle": "Nussbaum"
     },
     {
       "image": "/bilder/20170525_110602.jpg",
@@ -62,24 +69,23 @@
     },
     {
       "image": "/bilder/img_20181129_212934.jpg",
-      "title": "Esstisch  Anita"
-    },
-    {
-      "image": "/bilder/sideboard-kirsche-1.jpg",
-      "title": "Sideboard",
-      "subtitle": "Detail"
+      "title": "Esstisch  Anita",
+      "subtitle": "Nussbaum 305 x 105"
     },
     {
       "image": "/bilder/20171108_202319.jpg",
-      "title": "Pfeffermühle"
+      "title": "Pfeffermühle",
+      "subtitle": "Kirsche"
     },
     {
       "image": "/bilder/20170429_154539.jpg",
-      "title": "Schalen gedrechselt"
+      "title": "Schalen gedrechselt",
+      "subtitle": "Nussbaum roh"
     },
     {
       "image": "/bilder/muster-mit-plan-1.jpg",
-      "title": "Muster mit Plan"
+      "title": "Muster mit Plan Nachttisch Sabrina",
+      "subtitle": "Ebenholz"
     }
   ]
 }
