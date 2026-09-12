@@ -392,7 +392,7 @@
     <p class="kicker">Das Schiff</p>
     <div class="split">
       <div class="split-media wide">
-        <img src="andromaca-layout.png" alt="Kabinenlayout Andromaca: 4 Doppelkabinen, kein Eignerkabine" style="background:#F1ECE2;">
+        <img src="andromaca-layout.png" alt="Kabinenlayout Andromaca: 4 Doppelkabinen, je eigene Nasszelle" style="background:#F1ECE2;">
       </div>
       <div class="split-body">
         <h3>Andromaca — Comfort Line</h3>
@@ -403,12 +403,18 @@
           <tr><td>Länge über alles</td><td>ca. 14,6 m (48 Fuss)</td></tr>
           <tr><td>Breite</td><td>ca. 4,5 m</td></tr>
           <tr><td>Tiefgang</td><td>ca. 2,1–2,35 m (je nach Kielvariante)</td></tr>
-          <tr><td>Kabinen / Kojen</td><td>[mit Charterunternehmen bestätigen — Comfort-Layout typischerweise 4–5 Kabinen]</td></tr>
-          <tr><td>Kabinenlayout</td><td>4 Doppelkabinen, je eigene Nasszelle pro Kabinenpaar, grosser Salon mit Sitzgruppe mittschiffs</td></tr>
+          <tr><td>Kabinen / Kojen</td><td>4 Kabinen, 4 Nasszellen (Comfort-Layout)</td></tr>
+          <tr><td>Kabinenlayout</td><td>4 Doppelkabinen, je eigene Nasszelle, grosser Salon mit Sitzgruppe mittschiffs</td></tr>
           <tr><td>Ausrüstung</td><td>[Bugstrahlruder, Autopilot, Watermaker … bei Spartivento erfragen]</td></tr>
           <tr><td>Preis pro Person</td><td>CHF 650.–</td></tr>
         </table>
       </div>
+    </div>
+    <div class="mosaic" style="margin-top:40px;">
+      <div class="mcard"><img src="andromaca-cockpit1.png" alt="Cockpit der Andromaca im Hafen"></div>
+      <div class="mcard"><img src="andromaca-cockpit2.png" alt="Cockpit unter dem Bimini"></div>
+      <div class="mcard"><img src="andromaca-salon.png" alt="Salon und Pantry an Bord"></div>
+      <div class="mcard"><img src="andromaca-kabine.png" alt="Eine der Doppelkabinen"></div>
     </div>
   </div>
 </section>
@@ -566,84 +572,4 @@
       <p>Platzhalterbilder — bitte durch eigene Fotos vom Törn ersetzen.</p>
     </div>
     <div class="mosaic" id="gallery">
-      <div class="mcard tall" data-full="https://picsum.photos/id/1015/1400/1000"><img src="https://picsum.photos/id/1015/700/1000" alt="Küstenlandschaft"><div class="overlay"><div><h3>La Maddalena</h3><p>Küstenblick</p></div></div></div>
-      <div class="mcard" data-full="https://picsum.photos/id/1016/1400/1000"><img src="https://picsum.photos/id/1016/700/700" alt="Bucht"><div class="overlay"><div><h3>Spargi</h3><p>Ankerbucht</p></div></div></div>
-      <div class="mcard" data-full="https://picsum.photos/id/1002/1400/1000"><img src="https://picsum.photos/id/1002/700/700" alt="Segeln"><div class="overlay"><div><h3>Costa Smeralda</h3><p>Unterwegs unter Segeln</p></div></div></div>
-      <div class="mcard" data-full="https://picsum.photos/id/1039/1400/1000"><img src="https://picsum.photos/id/1039/700/700" alt="Hafen"><div class="overlay"><div><h3>Olbia</h3><p>Hafen</p></div></div></div>
-      <div class="mcard tall" data-full="https://picsum.photos/id/1043/1400/1000"><img src="https://picsum.photos/id/1043/700/1000" alt="Granitfelsen"><div class="overlay"><div><h3>Granitküste</h3><p>Maddalena-Archipel</p></div></div></div>
-      <div class="mcard" data-full="https://picsum.photos/id/1048/1400/1000"><img src="https://picsum.photos/id/1048/700/700" alt="Abendstimmung"><div class="overlay"><div><h3>Abendstimmung</h3><p>An Bord</p></div></div></div>
-      <div class="mcard" data-full="https://picsum.photos/id/1053/1400/1000"><img src="https://picsum.photos/id/1053/700/700" alt="Klippen"><div class="overlay"><div><h3>Isola Tavolara</h3><p>Klippen</p></div></div></div>
-      <div class="mcard" data-full="https://picsum.photos/id/1059/1400/1000"><img src="https://picsum.photos/id/1059/700/700" alt="Wasser"><div class="overlay"><div><h3>Cala Corsara</h3><p>Klares Wasser</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox">
-  <button class="close" id="lightboxClose" aria-label="Schliessen">✕</button>
-  <img id="lightboxImg" src="" alt="">
-  <p class="cap" id="lightboxCap"></p>
-</div>
-
-<footer>
-  <div class="wrap">
-    <span>Segeltörn Sardinien 2027 · Andromaca</span>
-    <span>4.–11. September 2027 · Start &amp; Ziel Olbia</span>
-  </div>
-</footer>
-
-<script>
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxCap = document.getElementById('lightboxCap');
-  document.querySelectorAll('#gallery .mcard').forEach(card => {
-    card.addEventListener('click', () => {
-      lightboxImg.src = card.dataset.full;
-      lightboxCap.textContent = card.querySelector('h3').textContent;
-      lightbox.classList.add('open');
-    });
-  });
-  document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
-  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.classList.remove('open'); });
-  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lightbox.classList.remove('open'); });
-
-  const itinTabs = document.querySelectorAll('.itin-tab');
-  const itinDays = document.querySelectorAll('.itin-day');
-  let itinIndex = 0;
-  function setItinDay(i){
-    itinIndex = (i + itinDays.length) % itinDays.length;
-    itinTabs.forEach(t => t.classList.toggle('active', Number(t.dataset.day) === itinIndex));
-    itinDays.forEach(d => d.classList.toggle('active', Number(d.dataset.day) === itinIndex));
-  }
-  itinTabs.forEach(t => t.addEventListener('click', () => setItinDay(Number(t.dataset.day))));
-  document.getElementById('itinPrev').addEventListener('click', () => setItinDay(itinIndex - 1));
-  document.getElementById('itinNext').addEventListener('click', () => setItinDay(itinIndex + 1));
-
-  document.querySelectorAll('.packcol .rm').forEach(btn => {
-    btn.addEventListener('click', () => btn.closest('li').remove());
-  });
-  document.querySelectorAll('.packcol').forEach(col => {
-    const input = col.querySelector('.addrow input');
-    const addBtn = col.querySelector('.addrow button.add');
-    const list = col.querySelector('ul');
-    function addItem(){
-      const val = input.value.trim();
-      if(!val) return;
-      const li = document.createElement('li');
-      li.innerHTML = '<label><input type="checkbox"> ' + val.replace(/</g,'&lt;') + '</label><button class="rm" aria-label="Entfernen">✕</button>';
-      list.appendChild(li);
-      li.querySelector('.rm').addEventListener('click', () => li.remove());
-      input.value = '';
-      input.focus();
-    }
-    addBtn.addEventListener('click', addItem);
-    input.addEventListener('keydown', (e) => { if(e.key === 'Enter'){ e.preventDefault(); addItem(); } });
-  });
-</script>
-
-</body>
-</html>
+      <div class="mcard tall" data-full="https://picsum.photos/id/1015/1400/1000"><img src="https://picsum.photos/id/1015/700/1000" alt="Küstenlandschaft"><div class="overlay"><div><h3>La Maddalena</h3><p
